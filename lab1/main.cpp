@@ -77,6 +77,7 @@ void Matrix(int **mat, int n, int m, int type)
 cout << "Ранг матрицы: ";
 cout << endl << my_rank(mat, n, m) << endl;
 
+//clearing dynamic memory
 for (int i = 0; i < n; i++)
 	delete[] mat[i];
 delete[] mat;
@@ -106,6 +107,7 @@ void Matrix(double **mat, int n, int m, int type)
 cout << endl << "Ранг матрицы: ";
 cout << my_rank(mat, n, m) << endl;
 
+//clearing dynamic memory
 for (int i = 0; i < n; i++)
 	delete[] mat[i];
 delete[] mat;
@@ -139,11 +141,12 @@ int main()
 
 	if (type_flag)
 	{
-		cout << "Введите кол-во столбцов и строк \n";
+		cout << "Введите кол-во строк и столбцов\n";
 		cin >> n >> m;
 
 		if ((n >= 2) and (n <= 15) and (m >= 2) and (m <= 15))
 		{
+			//initializing the dynamic matrix
 			int i;
 			if (type == 1)
 			{
