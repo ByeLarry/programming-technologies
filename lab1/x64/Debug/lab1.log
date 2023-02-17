@@ -1,16 +1,16 @@
 ﻿  main.cpp
-D:\My GitHub\programming-technologies\lab1\main.cpp(40,17): warning C4244: /=: преобразование "double" в "T1", возможна потеря данных
+D:\My GitHub\programming-technologies\lab1\main.cpp(52,17): warning C4244: /=: преобразование "double" в "T1", возможна потеря данных
           with
           [
               T1=int
           ]
-D:\My GitHub\programming-technologies\lab1\main.cpp(77,65): message : выполняется компиляция ссылки на экземпляр шаблон функции "int my_rank<int,int>(T1 **,T2,T2)"
+D:\My GitHub\programming-technologies\lab1\main.cpp(89,65): message : выполняется компиляция ссылки на экземпляр шаблон функции "int my_rank<int,int>(T1 **,T2,T2)"
           with
           [
               T1=int,
               T2=int
           ]
-D:\My GitHub\programming-technologies\lab1\main.cpp(48,24): warning C4244: -=: преобразование "double" в "T1", возможна потеря данных
+D:\My GitHub\programming-technologies\lab1\main.cpp(60,24): warning C4244: -=: преобразование "double" в "T1", возможна потеря данных
           with
           [
               T1=int

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <typeinfo>
-#include <cstdlib>
+#include <string>
+
 using namespace std;
 
 bool type_flag = false;
@@ -12,6 +13,17 @@ double rnd(int min, int max)
 {return min + rand() % (1000 * (max - min)) / 1000.0f;}
 
 
+int input(int x) {
+	cin >> x;
+	if (!cin.good()) {
+		cout << endl << "Ошибка ввода!\n";
+		cin.clear();
+		return 0;
+	}
+	else {
+		return x;
+	}
+}
 
 
 //Шаблон и подсчет ранга матрицы 
@@ -117,33 +129,43 @@ delete[] mat;
 
 int main()
 {
-	int type, n, m;
+
+	int  n = 0, m = 0;
+	int type = 0;
+	
 	setlocale(LC_ALL, "Rus");
 	cout << "Выберите тип данных матрицы: \n";
 	cout << "1) Integer \n";
 	cout << "2) Double \n";
-	cin >> type;
-	
+
+	type = input(type);
 	//Выбор типа данных
 	switch (type)
 	{
+	case 0:
+		type_flag = false;
+		break;
 	case 1:
 		type_flag = true;
+		cout << "Введите кол-во строк и столбцов\n";
 		break;
 	case 2:
 		type_flag = true;
+		cout << "Введите кол-во строк и столбцов\n";
 		break;
 	default:
 		cout << "Данные введены некорректно! \n";
 		type_flag = false;
 		break;
 	}
+	
+	
+
 
 	if (type_flag)
 	{
-		cout << "Введите кол-во строк и столбцов\n";
-		cin >> n >> m;
-
+		n = input(n);
+		m = input(m);
 		if ((n >= 2) and (n <= 15) and (m >= 2) and (m <= 15))
 		{
 			//Объявление динамической матрицы 
@@ -164,8 +186,7 @@ int main()
 			}
 			
 		}
-		else
-		{cout << "Данные введены некорректно! \n";}
+		
 	}
 	system("Pause");
 }
