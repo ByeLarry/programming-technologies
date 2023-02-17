@@ -6,7 +6,7 @@ using namespace std;
 bool type_flag = false;
 
 //https://ru.onlinemschool.com/math/assistance/matrix/rank/
-//для проверки
+//Для проверки
 
 double rnd(int min, int max)
 {return min + rand() % (1000 * (max - min)) / 1000.0f;}
@@ -14,7 +14,7 @@ double rnd(int min, int max)
 
 
 
-//template and rank calculation
+//Шаблон и подсчет ранга матрицы 
 template<typename T1, typename T2>
 int my_rank(T1 **mat, T2 n, T2 m)
 {
@@ -57,7 +57,7 @@ int my_rank(T1 **mat, T2 n, T2 m)
 
 
 
-// overload int
+//Перегрузка int
 void Matrix(int **mat, int n, int m, int type)
 {
 	int i, j;
@@ -77,7 +77,7 @@ void Matrix(int **mat, int n, int m, int type)
 cout << endl << "Ранг матрицы: " << my_rank(mat, n, m) << endl;
 cout << endl;
 
-//clearing dynamic memory
+//Очистка динамической памяти
 for (int i = 0; i < n; i++)
 	delete[] mat[i];
 delete[] mat;
@@ -86,7 +86,7 @@ delete[] mat;
 
 
 
-// overload double
+//Перегрузка double
 void Matrix(double **mat, int n, int m, int type)
 {
 	int i, j;
@@ -107,7 +107,7 @@ void Matrix(double **mat, int n, int m, int type)
 cout << endl << "Ранг матрицы: " << my_rank(mat, n, m) << endl ;
 cout << endl;
 
-//clearing dynamic memory
+//Очистка динамической памяти
 for (int i = 0; i < n; i++)
 	delete[] mat[i];
 delete[] mat;
@@ -124,6 +124,7 @@ int main()
 	cout << "2) Double \n";
 	cin >> type;
 	
+	//Выбор типа данных
 	switch (type)
 	{
 	case 1:
@@ -145,7 +146,7 @@ int main()
 
 		if ((n >= 2) and (n <= 15) and (m >= 2) and (m <= 15))
 		{
-			//initializing dynamic matrix
+			//Объявление динамической матрицы 
 			int i;
 			if (type == 1)
 			{
