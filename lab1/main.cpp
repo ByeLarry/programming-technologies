@@ -27,7 +27,7 @@ bool check(string inp) {
 	 string inp;
 	 cin >> inp;
 	 while (!check(inp)) {
-		 cout << "Некорректное значение! \n" << "Повторите ввод: ";
+		 cout << "Ошибка ввода! \n" << "Повторите: ";
 		 cin.clear();
 		 cin >> inp;
 	 }
@@ -194,6 +194,9 @@ int main()
 				Matrix(mat, n, m, type);		
 			}
 			
+		}
+		else {
+			cout << "Данные введены некорректно! \n";
 		}
 		
 	}
