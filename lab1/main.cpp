@@ -13,16 +13,25 @@ double rnd(int min, int max)
 {return min + rand() % (1000 * (max - min)) / 1000.0f;}
 
 
-int input(int x) {
-	cin >> x;
-	if (!cin.good()) {
-		cout << endl << "Ошибка ввода!\n";
-		cin.clear();
-		return 0;
+bool check(string inp) {
+	for (char c : inp) {
+		if (!isdigit(c) or c == '-' or c == '.') {
+			return false;
+		}
 	}
-	else {
-		return x;
-	}
+	return true;
+}
+
+
+ int input() {
+	 string inp;
+	 cin >> inp;
+	 while (!check(inp)) {
+		 cout << "Некорректное значение! \n" << "Повторите ввод: ";
+		 cin.clear();
+		 cin >> inp;
+	 }
+	 return stoi(inp);
 }
 
 
@@ -130,15 +139,15 @@ delete[] mat;
 int main()
 {
 
-	int  n = 0, m = 0;
-	int type = 0;
+	int  n = 0, m = 0, type ;
+	string imp;
 	
 	setlocale(LC_ALL, "Rus");
 	cout << "Выберите тип данных матрицы: \n";
 	cout << "1) Integer \n";
 	cout << "2) Double \n";
+	type = input();
 
-	type = input(type);
 	//Выбор типа данных
 	switch (type)
 	{
@@ -147,11 +156,9 @@ int main()
 		break;
 	case 1:
 		type_flag = true;
-		cout << "Введите кол-во строк и столбцов\n";
 		break;
 	case 2:
 		type_flag = true;
-		cout << "Введите кол-во строк и столбцов\n";
 		break;
 	default:
 		cout << "Данные введены некорректно! \n";
@@ -164,8 +171,10 @@ int main()
 
 	if (type_flag)
 	{
-		n = input(n);
-		m = input(m);
+		cout << "Введите кол-во строк: ";
+		n = input();
+		cout << "Введите кол-во столбцов: ";
+		m = input();
 		if ((n >= 2) and (n <= 15) and (m >= 2) and (m <= 15))
 		{
 			//Объявление динамической матрицы 
