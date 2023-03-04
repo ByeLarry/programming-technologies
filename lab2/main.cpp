@@ -14,7 +14,6 @@ bool check(string inp) {
 			return false;
 		}
 	}
-	//if (stoi(inp) >= 2 or stoi(inp) <= 10)
 	return true;
 }
 
@@ -76,10 +75,17 @@ public:
 class LinkedList {
 public:
 	Node* head, * tail;
+
 public:
 	LinkedList() {
 		head = tail = nullptr;
 	}
+	~LinkedList(){
+		while (head != nullptr) {
+			pop_front();
+		}
+	}
+
 	Node* push_front(int* ai, char ch, int si) {
 		Node* ptr = new Node(ai, ch, si);
 		ptr->next = head;
@@ -102,13 +108,12 @@ public:
 		if (head == nullptr) {
 			cout << "Нет элементов для удаления!" << endl;
 			return;
-		}
-			
+		}	
 		Node* ptr = head->next;
 		if (ptr != nullptr) ptr->prev = nullptr;
 		else tail = nullptr;
 		free(head->ai);
-		free(head);
+		delete head;
 		head = ptr;
 		cout << "Элемент удален" << endl;
 	}
@@ -123,7 +128,7 @@ public:
 		if (ptr != nullptr) ptr->next = nullptr;
 		else head = nullptr;
 		free(tail->ai);
-		free(tail);
+		delete tail;
 		tail = ptr;
 		cout << "Элемент удален" << endl;
 	}
@@ -137,6 +142,11 @@ public:
 			n++;
 		}
 		return ptr;
+	}
+
+	Node* operator  () (int index) {
+		Node* ptr = getAt(index);
+		if (ptr != nullptr) return ptr;
 	}
 
 	Node* insert(int index, int* ai, char ch, int si) {
@@ -173,7 +183,6 @@ public:
 		Node* right = ptr->next;
 		left->next = right;
 		right->prev = left;
-		//free(ptr);
 		cout << "Элемент удален" << endl;
 	}
 };
@@ -197,7 +206,8 @@ int main()
 	cout << "5)Вывести список\n";
 	cout << "6)Добавить элемент по индексу\n";
 	cout << "7)Удалить элемент по индексу\n";
-	cout << "8)Выход\n \n";
+	cout << "8)Вывести элемент по индексу\n";
+	cout << "9)Выход\n \n";
 	
 	while (!ex_fl)
 	{
@@ -245,6 +255,7 @@ int main()
 			cout << endl;
 			break;
 		case 6:
+			cout << "Если введенный индекс будет больше максимального, то элемент списка добавится в конец!" << endl;
 			cout << "Введите индекс:  ";
 			ind = input();
 			cout << "Введите размер массива:  ";
@@ -256,7 +267,6 @@ int main()
 			ch = inputChar();
 			cout << endl;
 			ml.insert(ind,ai, ch, si);
-			//delete[] ai;
 			break;
 		case 7:
 			cout << "Введите индекс:  ";
@@ -264,9 +274,18 @@ int main()
 			ml.erase(ind);
 			break;
 		case 8:
-			while (ml.head != nullptr) {
-				ml.pop_front();
+			cout << "Введите индекс:  ";
+			ind = input();
+			if (ml(ind) != nullptr) {
+				cout << ml(ind)->ch << " ";
+				for (int i = 0; i < ml(ind)->si; i++) {
+					cout << ml(ind)->ai[i] << " ";
+				}
+				cout << endl;
 			}
+			else cout << "Элемента с выбранным индексом не существует!" << endl;
+			break;
+		case 9:
 			ex_fl = true;
 			break;
 		default:
