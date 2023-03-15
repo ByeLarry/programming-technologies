@@ -1,0 +1,10 @@
+﻿  main.cpp
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(287,19): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(289,17): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(291,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(297,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(298,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(300,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(283): warning C4715: SoftwareChildProcedure: значение возвращается не при всех путях выполнения
+D:\My GitHub\programming-technologies\lab3(winapi)\main.cpp(250): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
+  lab3(winapi).vcxproj -> D:\My GitHub\programming-technologies\lab3(winapi)\x64\Debug\lab3(winapi).exe

@@ -38,6 +38,11 @@ bool check(string inp) {
 template<typename T1, typename T2>
 int my_rank(T1 **mat, T2 n, T2 m)
 {
+
+	int a;
+	a = a + 5;
+	cout << a;
+
 	int pivot;
 	int c = 0;
 	for (int i = 0; i < n; i++)
