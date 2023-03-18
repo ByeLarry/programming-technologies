@@ -183,7 +183,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 
 				HWND childWindow = CreateWindowEx(
 					0, L"ChildWndClass", L"Дочернее окно", WS_OVERLAPPEDWINDOW | WS_VISIBLE,
-					300, 300, 300, 300, hWnd, NULL, NULL, NULL
+					300, 300, 300, 150, hWnd, NULL, NULL, NULL
 				);
 				if (childWindow == NULL) {
 					MessageBox(childWindow, L"Не удалось создать дочернее окно", L"Ошибка", MB_OK | MB_ICONERROR);
@@ -191,7 +191,6 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 				}
 
 			}
-
 			break;
 		default: break;
 		}
@@ -242,20 +241,20 @@ LRESULT CALLBACK SoftwareChildProcedure(HWND childWindow, UINT msg, WPARAM wp, L
 
 
 void MainWndAddWidgets(HWND hWnd) {
-	hStaticControl = CreateWindowA("static", "Введите матрицу смежности(6 на 6)", WS_VISIBLE | WS_CHILD | ES_CENTER, 0, 0, 490, 20, hWnd, NULL, NULL, NULL, NULL);
+	hStaticControl = CreateWindowA("static", "Введите матрицу смежности(6 на 6)", WS_VISIBLE | WS_CHILD , 0, 0, 490, 20, hWnd, NULL, NULL, NULL, NULL);
 
-	hEditControl = CreateWindowA("edit", "", WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_NUMBER, 0, 30, 490, 200, hWnd, NULL, NULL, NULL, NULL);
+	hEditControl = CreateWindowA("edit", "000000\r\n000000\r\n000000\r\n000000\r\n000000\r\n000000", WS_VISIBLE | WS_CHILD | ES_MULTILINE | ES_NUMBER, 0, 30, 55, 100, hWnd, NULL, NULL, NULL, NULL);
 
-	CreateWindowA("button", "Посчитать", WS_VISIBLE | WS_CHILD | ES_CENTER, 200, 420, 100, 30, hWnd, (HMENU)OnButtonClicked, NULL, NULL, NULL);
+	CreateWindowA("button", "Посчитать", WS_VISIBLE | WS_CHILD | ES_CENTER, 200, 140, 100, 30, hWnd, (HMENU)OnButtonClicked, NULL, NULL, NULL);
 
-	hNumberAControl = CreateWindowA("edit", "0", WS_VISIBLE | WS_CHILD | ES_NUMBER, 0, 300, 50, 20, hWnd, (HMENU)DlgIndexNumberA, NULL, NULL);
+	hNumberAControl = CreateWindowA("edit", "0", WS_VISIBLE | WS_CHILD | ES_NUMBER, 70, 60, 50, 20, hWnd, (HMENU)DlgIndexNumberA, NULL, NULL);
 
-	hNumberBControl = CreateWindowA("edit", "1", WS_VISIBLE | WS_CHILD | ES_NUMBER, 0, 340, 50, 20, hWnd, (HMENU)DlgIndexNumberB, NULL, NULL);
+	hNumberBControl = CreateWindowA("edit", "1", WS_VISIBLE | WS_CHILD | ES_NUMBER, 70, 100, 50, 20, hWnd, (HMENU)DlgIndexNumberB, NULL, NULL);
 
-	CreateWindowA("static", "А", WS_VISIBLE | WS_CHILD, 60, 300, 20, 20, hWnd, NULL, NULL, NULL, NULL);
-	CreateWindowA("static", "B", WS_VISIBLE | WS_CHILD, 60, 340, 20, 20, hWnd, NULL, NULL, NULL, NULL);
+	CreateWindowA("static", "А", WS_VISIBLE | WS_CHILD, 130, 60, 20, 20, hWnd, NULL, NULL, NULL, NULL);
+	CreateWindowA("static", "B", WS_VISIBLE | WS_CHILD, 130, 100, 20, 20, hWnd, NULL, NULL, NULL, NULL);
 
-	hStaticControlNums = CreateWindowA("static", "Введите вершины", WS_VISIBLE | WS_CHILD, 75, 320, 400, 20, hWnd, NULL, NULL, NULL, NULL);
+	hStaticControlNums = CreateWindowA("static", "Введите вершины", WS_VISIBLE | WS_CHILD , 0, 140, 200, 20, hWnd, NULL, NULL, NULL, NULL);
 
 }
 
