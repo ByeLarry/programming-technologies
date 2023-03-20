@@ -1,4 +1,10 @@
 #pragma once
+#pragma comment(lib, "Childform\\x64\\Debug\\Childform.lib")
+//путь для подключения динамической библиотеки
+//это нужно для того чтобы подключить библиотеку во время запуска программы, а не во время работы
+//либ в данном случае не содержит реализации функций, поэтому длл должна быть в файле с проектом
+
+
 #include<Windows.h>
 #include<string>
 #include <sstream>
@@ -15,13 +21,17 @@ unsigned numA;
 unsigned numB;
 
 
-//длл для дийкстры 
+//при явной загрузке надо создавать указатель на адресс функции  
 typedef std::string(*Mydij)(int, int, int(*)[6]);
 HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra\\x64\\Debug\\Dijkstra.dll"));
 Mydij myD = (Mydij)GetProcAddress(hinstDLL, "Mydijkstra");
 
-//заголовочный файл с интерфейсом из библиотеки
+//заголовочный файл с интерфейсом из статической библиотеки 
 #include"interface/interface.h"
+//заголовочный файл с интерфейсом из динамической библиотеки
+#include"Childform/Child.h"
+
+
 
 HWND childText;
 HWND hEditControl;
@@ -138,7 +148,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 
 				int start = numA - 1 ;
 				int end = numB - 1;
-				//явный вызов, обращаясь к переменной, хранящей в себе адресс функции 
+				//явный вызов из динамической библиотеки, обращаясь к переменной, хранящей в себе адресс функции 
 				path = myD (start, end, matrix);
 
 				HWND childWindow = CreateWindowEx(
@@ -157,13 +167,15 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 		break;
 
 	case WM_CREATE:
-		//неявный вызов, обращаясь напрямую к заголовочному файлу 
-		hEditControl = WndEdit(hWnd);
+		//вызов функций из статической библиотеки 
 		hStaticControl = WndStaticControl(hWnd);
 		hNumberAControl = WndNumberAControl(hWnd);
 		hNumberBControl = WndNumberBControl(hWnd);
 		MainWndAddWidgets(hWnd);
 		hStaticControlNums = WndStaticControlNums(hWnd);
+
+		//неявный вызов функции динамической библиотеки 
+		hEditControl = WndEditFromChild(hWnd);
 		break;
 
 	case WM_DESTROY:
