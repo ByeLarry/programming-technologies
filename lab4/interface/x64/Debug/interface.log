@@ -1,0 +1,10 @@
+﻿  pch.cpp
+  interface.cpp
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(9,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(10,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(11,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(12,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(17,22): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(22,24): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\interface\interface.cpp(37,28): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+  interface.vcxproj -> D:\My GitHub\programming-technologies\lab4\interface\x64\Debug\interface.lib

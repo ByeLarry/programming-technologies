@@ -1,5 +1,4 @@
 #pragma once
-#pragma comment(lib, "Childform.dll")
 #include<Windows.h>
 #include<string>
 #include <sstream>
@@ -15,15 +14,14 @@ int readChar;
 unsigned numA;
 unsigned numB;
 
-//длл для дийкстры в явном виде
-#include ".\Dijkstra\Dij.h"
+
+//длл для дийкстры 
 typedef std::string(*Mydij)(int, int, int(*)[6]);
-HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra.dll"));
+HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra\\x64\\Debug\\Dijkstra.dll"));
 Mydij myD = (Mydij)GetProcAddress(hinstDLL, "Mydijkstra");
 
-//длл для интерфейса главной формы в неявном виде
-#include "./Childform/Child.h"
-
+//заголовочный файл с интерфейсом из библиотеки
+#include"interface/interface.h"
 
 HWND childText;
 HWND hEditControl;
@@ -93,13 +91,13 @@ bool ValidateMatrix() {
 
 
 bool CheckNums() {
-	if (numA == numB) {
+	if (numA == numB || numA == 0 || numB == 0) {
 		return false;
 	}
-	if (numA > 5) {
+	if (numA > 6) {
 		return false;
 	}
-	if (numB > 5) {
+	if (numB > 6) {
 		return false;
 	}
 	return true;
@@ -107,21 +105,6 @@ bool CheckNums() {
 
 
 LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
-	HINSTANCE hinstDLLc = LoadLibrary(TEXT("Childform.dll"));
-	if (hinstDLLc == NULL) {
-		MessageBox(hWnd, L"длл для интерфейса не открылась", L"Ошибка", MB_OK | MB_ICONERROR);
-	}
-	typedef void (*MyCh)(HWND);
-	typedef HWND(*MyCh2)(HWND);
-	MyCh MainWndAddWidgets = (MyCh)GetProcAddress(hinstDLLc, "MainWndAddWidgets");
-	if (MainWndAddWidgets == NULL) {
-		MessageBox(hWnd, L"проблема с функцией из длл", L"Ошибка", MB_OK | MB_ICONERROR);
-	}
-	MyCh2 WndEdit = (MyCh2)GetProcAddress(hinstDLLc, "WndEdit");
-	if (WndEdit == NULL) {
-		MessageBox(hWnd, L"проблема с функцией из длл", L"Ошибка", MB_OK | MB_ICONERROR);
-	}
-	
 	switch (msg) {
 	case WM_COMMAND:
 		switch (wp)
@@ -147,14 +130,15 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 				SetWindowTextA(hStaticControlNums, "Вершины заданы корректно");
 			}
 			else {
-				SetWindowTextA(hStaticControlNums, "Вершины заданы некорректно!");
+				SetWindowTextA(hStaticControlNums, "Вершины не заданы!");
 			}
 
 			if (CheckNums() && ValidateMatrix()) {
 				EnableWindow(hWnd, FALSE);
 
-				int start = numA;
-				int end = numB;
+				int start = numA - 1 ;
+				int end = numB - 1;
+				//явный вызов, обращаясь к переменной, хранящей в себе адресс функции 
 				path = myD (start, end, matrix);
 
 				HWND childWindow = CreateWindowEx(
@@ -173,8 +157,13 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 		break;
 
 	case WM_CREATE:
+		//неявный вызов, обращаясь напрямую к заголовочному файлу 
 		hEditControl = WndEdit(hWnd);
+		hStaticControl = WndStaticControl(hWnd);
+		hNumberAControl = WndNumberAControl(hWnd);
+		hNumberBControl = WndNumberBControl(hWnd);
 		MainWndAddWidgets(hWnd);
+		hStaticControlNums = WndStaticControlNums(hWnd);
 		break;
 
 	case WM_DESTROY:
