@@ -21,10 +21,6 @@ unsigned numA;
 unsigned numB;
 
 
-//при явной загрузке надо создавать указатель на адресс функции  
-typedef std::string(*Mydij)(int, int, int(*)[6]);
-HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra\\x64\\Debug\\Dijkstra.dll"));
-Mydij myD = (Mydij)GetProcAddress(hinstDLL, "Mydijkstra");
 
 //заголовочный файл с интерфейсом из статической библиотеки 
 #include"interface/interface.h"
@@ -115,6 +111,11 @@ bool CheckNums() {
 
 
 LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
+	//при явной загрузке надо создавать указатель на адресс функции  
+	typedef std::string(*Mydij)(int, int, int(*)[6]);
+	HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra\\x64\\Debug\\Dijkstra.dll"));
+	Mydij myD = (Mydij)GetProcAddress(hinstDLL, "Mydijkstra");
+	
 	switch (msg) {
 	case WM_COMMAND:
 		switch (wp)
