@@ -1,3 +1,8 @@
 LIBRARY
 EXPORTS
     WndEditFromChild
+    WndStaticControlChild
+    WndNumberAControlChild
+    WndNumberBControlChild
+    WndStaticControlNumsChild
+    MainWndAddWidgetsChild

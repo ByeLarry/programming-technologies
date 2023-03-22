@@ -23,7 +23,7 @@ unsigned numB;
 
 
 //заголовочный файл с интерфейсом из статической библиотеки 
-#include"interface/interface.h"
+//#include"interface/interface.h"
 //заголовочный файл с интерфейсом из динамической библиотеки
 #include"Childform/Child.h"
 
@@ -169,14 +169,20 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 
 	case WM_CREATE:
 		//вызов функций из статической библиотеки 
-		hStaticControl = WndStaticControl(hWnd);
+		/*hStaticControl = WndStaticControl(hWnd);
 		hNumberAControl = WndNumberAControl(hWnd);
 		hNumberBControl = WndNumberBControl(hWnd);
 		MainWndAddWidgets(hWnd);
-		hStaticControlNums = WndStaticControlNums(hWnd);
+		hStaticControlNums = WndStaticControlNums(hWnd);*/
+
 
 		//неявный вызов функции динамической библиотеки 
+		hStaticControl = WndStaticControlChild(hWnd);
+		hNumberAControl = WndNumberAControlChild(hWnd);
+		hNumberBControl = WndNumberBControlChild(hWnd);
+		MainWndAddWidgetsChild(hWnd);
 		hEditControl = WndEditFromChild(hWnd);
+		hStaticControlNums = WndStaticControlNumsChild(hWnd);
 		break;
 
 	case WM_DESTROY:
