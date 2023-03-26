@@ -116,6 +116,7 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 	HINSTANCE hinstDLL = LoadLibrary(TEXT("Dijkstra\\x64\\Debug\\Dijkstra.dll"));
 	Mydij myD = (Mydij)GetProcAddress(hinstDLL, "Mydijkstra");
 	
+	
 	switch (msg) {
 	case WM_COMMAND:
 		switch (wp)
@@ -147,10 +148,16 @@ LRESULT CALLBACK SoftwareMainProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp
 			if (CheckNums() && ValidateMatrix()) {
 				EnableWindow(hWnd, FALSE);
 
-				int start = numA - 1 ;
-				int end = numB - 1;
-				//явный вызов из динамической библиотеки, обращаясь к переменной, хранящей в себе адресс функции 
-				path = myD (start, end, matrix);
+				if (hinstDLL == NULL) {
+					MessageBox(hWnd, L"Библиотека Dijkstra.dll не найдена!", L"Ошибка!", NULL);
+				}
+				else {
+					int start = numA - 1 ;
+					int end = numB - 1;
+					//явный вызов из динамической библиотеки, обращаясь к переменной, хранящей в себе адресс функции 
+					path = myD (start, end, matrix);
+				}
+				
 
 				HWND childWindow = CreateWindowEx(
 					0, L"ChildWndClass", L"Дочернее окно", WS_OVERLAPPEDWINDOW | WS_VISIBLE,
