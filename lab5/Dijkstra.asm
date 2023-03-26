@@ -46,23 +46,22 @@ for1:
         jge endfor2
         ;условие---------------------
         ; Проверяем visited[j]
-        mov eax, [visited + edx*4] ; Загружаем visited[edx] в регистр eax
-        cmp eax, 0 ; Сравниваем eax с 0
-        jne endif1 ; Если visited[edx] не равно 0, переходим к endif1
+        mov eax, [visited + edx*4] 
+        cmp eax, 0 
+        jne endif1 
 
-        ; Проверяем u == -1
-        mov eax, u ; Загружаем u в регистр eax
-        cmp eax, 100 ; Сравниваем eax с -1
-        je then1 ; Если u равно -1, переходим к then1
+        mov eax, u 
+        cmp eax, 100 
+        je then1 
 
-        ; Проверяем dist[edx] < dist[u]
-        mov eax, [dist + edx*4] ; Загружаем dist[j] в регистр eax
+        ; dist[edx] < dist[u]
+        mov eax, [dist + edx*4] 
         mov ebx, [u]
-        mov ebx, [dist + ebx*4] ; Загружаем dist[u] в регистр ebx
-        cmp eax, ebx ; Сравниваем dist[j] и dist[u]
-        jge endif1 ; Если dist[edx] >= dist[u], переходим к endif1
+        mov ebx, [dist + ebx*4] 
+        cmp eax, ebx 
+        jge endif1 
 
-        ; Если оба условия выполняются, то присваиваем u значение edx
+        ; Если оба условия выполняются
         then1:
         mov eax, edx ; Загружаем j в регистр eax
         mov [u], eax ; Присваиваем u значение eax
