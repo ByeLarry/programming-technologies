@@ -1,1 +1,5 @@
-﻿  lab2.vcxproj -> D:\My GitHub\programming-technologies\lab2\x64\Debug\lab2.exe
+﻿  main.cpp
+D:\My GitHub\programming-technologies\lab2\main.cpp(196,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\My GitHub\programming-technologies\lab2\main.cpp(164): warning C4715: LinkedList::insert: значение возвращается не при всех путях выполнения
+D:\My GitHub\programming-technologies\lab2\main.cpp(150): warning C4715: LinkedList::operator(): значение возвращается не при всех путях выполнения
+  lab2.vcxproj -> D:\My GitHub\programming-technologies\lab2\x64\Debug\lab2.exe

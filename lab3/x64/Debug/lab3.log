@@ -1,5 +1,7 @@
 ﻿  MainForm.cpp
 D:\My GitHub\programming-technologies\lab3\MainForm.h(321,1): warning C4965: неявная упаковка целого числа 0; используйте nullptr или явное приведение типов
+  SecondForm.cpp
+  Создание кода...
 D:\My GitHub\programming-technologies\lab3\MainForm.h(414): warning C4700: использована неинициализированная локальная переменная "i"
 D:\My GitHub\programming-technologies\lab3\MainForm.h(420): warning C4700: использована неинициализированная локальная переменная "i"
 D:\My GitHub\programming-technologies\lab3\MainForm.h(426): warning C4700: использована неинициализированная локальная переменная "i"

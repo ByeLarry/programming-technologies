@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
@@ -10,7 +10,7 @@ bool check(string inp) {
 		if (!isdigit(c)) return false;
 		if (ii > 1) {
 			cout << endl;
-			cout << "Íåëüçÿ ââîäèòü áîëüøå 2 ñèìâîëîâ!" << endl;
+			cout << "ÐÐµÐ»ÑŒÐ·Ñ Ð²Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 2 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²!" << endl;
 			return false;
 		}
 	}
@@ -35,7 +35,7 @@ int input() {
 	string inp;
 	cin >> inp;
 	while (!check(inp)) {
-		cout << "Îøèáêà ââîäà! \n" << "Ïîâòîðèòå: ";
+		cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°! \n" << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ: ";
 		cin.clear();
 		cin >> inp;
 	}
@@ -47,7 +47,7 @@ char inputChar() {
 	string inp;
 	cin >> inp;
 	while (!checkChar(inp)) {
-		cout << "Îøèáêà ââîäà! \n" << "Ïîâòîðèòå: ";
+		cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°! \n" << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ: ";
 		cin.clear();
 		cin >> inp;
 	}
@@ -106,7 +106,7 @@ public:
 
 	void pop_front() {
 		if (head == nullptr) {
-			cout << "Íåò ýëåìåíòîâ äëÿ óäàëåíèÿ!" << endl;
+			cout << "ÐÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ!" << endl;
 			return;
 		}	
 		Node* ptr = head->next;
@@ -115,12 +115,12 @@ public:
 		free(head->ai);
 		delete head;
 		head = ptr;
-		cout << "Ýëåìåíò óäàëåí" << endl;
+		cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½" << endl;
 	}
 
 	void pop_back() {
 		if (tail == nullptr) {
-			cout << "Íåò ýëåìåíòîâ äëÿ óäàëåíèÿ!" << endl;
+			cout << "ÐÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ!" << endl;
 			return;
 		}
 			
@@ -130,7 +130,7 @@ public:
 		free(tail->ai);
 		delete tail;
 		tail = ptr;
-		cout << "Ýëåìåíò óäàëåí" << endl;
+		cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½" << endl;
 	}
 
 	Node* getAt(int index) {
@@ -166,7 +166,7 @@ public:
 	void erase(int index) {
 		Node* ptr = getAt(index);
 		if (ptr == nullptr) {
-			cout << "Ýëåìåíòà ñ âûáðàííûì èíäåêñîì íå ñóùåñòâóåò!" << endl;
+			cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ñ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ñ‹Ð¼ Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð¼ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!" << endl;
 			return;
 		}	
 		if (ptr->prev == nullptr) {
@@ -183,7 +183,7 @@ public:
 		Node* right = ptr->next;
 		left->next = right;
 		right->prev = left;
-		cout << "Ýëåìåíò óäàëåí" << endl;
+		cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½" << endl;
 	}
 };
 
@@ -199,41 +199,41 @@ int main()
 	char ch;
 	int ind;
 	setlocale(LC_ALL, "Rus");
-	cout << "1)Äîáàâèòü ýëåìåíò ñâåðõó\n";
-	cout << "2)Äîáàâèòü ýëåìåíò ñíèçó\n";
-	cout << "3)Óäàëèòü ýëåìåíò ñâåðõó\n";
-	cout << "4)Óäàëèòü ýëåìåíò ñíèçó\n";
-	cout << "5)Âûâåñòè ñïèñîê\n";
-	cout << "6)Äîáàâèòü ýëåìåíò ïî èíäåêñó\n";
-	cout << "7)Óäàëèòü ýëåìåíò ïî èíäåêñó\n";
-	cout << "8)Âûâåñòè ýëåìåíò ïî èíäåêñó\n";
-	cout << "9)Âûõîä\n \n";
+	cout << "1)Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ²ÐµÑ€Ñ…Ñƒ\n";
+	cout << "2)Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ½Ð¸Ð·Ñƒ\n";
+	cout << "3)Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ²ÐµÑ€Ñ…Ñƒ\n";
+	cout << "4)Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ½Ð¸Ð·Ñƒ\n";
+	cout << "5)Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº\n";
+	cout << "6)Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ\n";
+	cout << "7)Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ\n";
+	cout << "8)Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ\n";
+	cout << "9)Ð’Ñ‹Ñ…Ð¾Ð´\n \n";
 	
 	while (!ex_fl)
 	{
-		cout << "Âûáåðèòå êîìàíäó:  "; 
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñƒ:  "; 
 		sel = input();
 		cout << endl;
 		switch (sel)
 		{
 		case 1:
-			cout << "Ââåäèòå ðàçìåð ìàññèâà:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°:  ";
 			si = input();
 			ai = (int*)malloc(si * sizeof(int)) ;
 			for (int i = 0; i < si; i++)
 				ai[i] = rand() % 100;
-			cout << "Ââåäèòå ñèìâîë:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»:  ";
 			ch = inputChar();
 			cout << endl;
 			ml.push_front(ai, ch, si);
 			break;
 		case 2: 
-			cout << "Ââåäèòå ðàçìåð ìàññèâà:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°:  ";
 			si = input();
 			ai = (int*)malloc(si * sizeof(int));
 			for (int i = 0; i < si; i++)
 				ai[i] = rand() % 100;
-			cout << "Ââåäèòå ñèìâîë:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»:  ";
 			ch = inputChar();
 			cout << endl;
 			ml.push_back(ai, ch, si);
@@ -255,26 +255,26 @@ int main()
 			cout << endl;
 			break;
 		case 6:
-			cout << "Åñëè ââåäåííûé èíäåêñ áóäåò áîëüøå ìàêñèìàëüíîãî, òî ýëåìåíò ñïèñêà äîáàâèòñÿ â êîíåö!" << endl;
-			cout << "Ââåäèòå èíäåêñ:  ";
+			cout << "Ð•ÑÐ»Ð¸ Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ Ð±ÑƒÐ´ÐµÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾, Ñ‚Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ¿Ð¸ÑÐºÐ° Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑÑ Ð² ÐºÐ¾Ð½ÐµÑ†!" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ:  ";
 			ind = input();
-			cout << "Ââåäèòå ðàçìåð ìàññèâà:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°:  ";
 			si = input();
 			ai = (int*)malloc(si * sizeof(int));
 			for (int i = 0; i < si; i++)
 				ai[i] = rand() % 100;
-			cout << "Ââåäèòå ñèìâîë:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»:  ";
 			ch = inputChar();
 			cout << endl;
 			ml.insert(ind,ai, ch, si);
 			break;
 		case 7:
-			cout << "Ââåäèòå èíäåêñ:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ:  ";
 			ind = input();
 			ml.erase(ind);
 			break;
 		case 8:
-			cout << "Ââåäèòå èíäåêñ:  ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ:  ";
 			ind = input();
 			if (ml(ind) != nullptr) {
 				cout << ml(ind)->ch << " ";
@@ -283,13 +283,13 @@ int main()
 				}
 				cout << endl;
 			}
-			else cout << "Ýëåìåíòà ñ âûáðàííûì èíäåêñîì íå ñóùåñòâóåò!" << endl;
+			else cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ñ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ñ‹Ð¼ Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð¼ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!" << endl;
 			break;
 		case 9:
 			ex_fl = true;
 			break;
 		default:
-			cout << "Íåâåðíûé ââîä!" << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´!" << endl;
 			break;
 		}
 	}
