@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-
+//проверка ввода int
 bool check(string inp) {
 	int ii = 0;
 	for (char c : inp) {
@@ -17,6 +17,7 @@ bool check(string inp) {
 	return true;
 }
 
+//проверка на то, что введенный символ один
 bool checkChar(string inp) {
 	int ii = 0;
 	for (char c : inp) {
@@ -30,7 +31,7 @@ bool checkChar(string inp) {
 }
 
 
-
+//самодельный ввод int
 int input() {
 	string inp;
 	cin >> inp;
@@ -42,7 +43,7 @@ int input() {
 	return stoi(inp);
 }
 
-
+//самодельный ввод char
 char inputChar() {
 	string inp;
 	cin >> inp;
@@ -54,7 +55,7 @@ char inputChar() {
 	return inp[0];
 }
 
-
+//класс узла списка
 class Node {
 public:
 	int* ai;
@@ -63,6 +64,8 @@ public:
 	Node* prev, * next;
 
 public:
+	//конструктор
+	//при инициализации узла, значения заносятся в объект класса
 	Node(int* ai, char ch, int si) {
 		this->ai = ai;
 		this->ch = ch;
@@ -71,21 +74,24 @@ public:
 	}
 };
 
-
+//класс списка 
 class LinkedList {
 public:
 	Node* head, * tail;
 
 public:
+	//конструктр списка
 	LinkedList() {
 		head = tail = nullptr;
 	}
+	//диструктор списка
 	~LinkedList(){
 		while (head != nullptr) {
 			pop_front();
 		}
 	}
 
+	//вставка в начало(голову) списка
 	Node* push_front(int* ai, char ch, int si) {
 		Node* ptr = new Node(ai, ch, si);
 		ptr->next = head;
@@ -95,6 +101,7 @@ public:
 		return ptr;
 	}
 
+	//вставка в конец(хвост) списка
 	Node* push_back(int* ai, char ch, int si) {
 		Node* ptr = new Node(ai, ch, si);
 		ptr->prev = tail;
@@ -104,6 +111,7 @@ public:
 		return ptr;
 	}
 
+	//удаление с начала(головы) списка
 	void pop_front() {
 		if (head == nullptr) {
 			cout << "Нет элементов для удаления!" << endl;
@@ -118,6 +126,7 @@ public:
 		cout << "Элемент удален" << endl;
 	}
 
+	//удаление с конца(хвоста) списка
 	void pop_back() {
 		if (tail == nullptr) {
 			cout << "Нет элементов для удаления!" << endl;
@@ -133,6 +142,8 @@ public:
 		cout << "Элемент удален" << endl;
 	}
 
+	//метод для получения узла с нужным индексом
+	//пробегает от головы списка до конца
 	Node* getAt(int index) {
 		Node* ptr = head;
 		int n = 0;
@@ -144,11 +155,15 @@ public:
 		return ptr;
 	}
 
+	//оператор для упрощения обращения 
 	Node* operator  () (int index) {
 		Node* ptr = getAt(index);
 		if (ptr != nullptr) return ptr;
 	}
 
+	//вставка по идексу
+	//здесь и далее(erase) используем getAt
+	//для получения нужного узла
 	Node* insert(int index, int* ai, char ch, int si) {
 		Node* right = getAt(index);
 		if (right == nullptr) return push_back(ai, ch, si);
@@ -163,6 +178,9 @@ public:
 		right->prev = ptr;
 	}
 
+	//удаляем элемент по индексу
+	//если такого нет, то удаляем либо с головы, либо с хвоста,
+	//в зависимости от индекса
 	void erase(int index) {
 		Node* ptr = getAt(index);
 		if (ptr == nullptr) {
@@ -208,7 +226,7 @@ int main()
 	cout << "7)Удалить элемент по индексу\n";
 	cout << "8)Вывести элемент по индексу\n";
 	cout << "9)Выход\n \n";
-	
+	//реализация консольных вводов
 	while (!ex_fl)
 	{
 		cout << "Выберите команду:  "; 
@@ -217,6 +235,7 @@ int main()
 		switch (sel)
 		{
 		case 1:
+			//задается размер массива, после чего он генерируется радномно, затем ввод char
 			cout << "Введите размер массива:  ";
 			si = input();
 			ai = (int*)malloc(si * sizeof(int)) ;
@@ -228,6 +247,7 @@ int main()
 			ml.push_front(ai, ch, si);
 			break;
 		case 2: 
+			//задается размер массива, после чего он генерируется радномно, затем ввод char
 			cout << "Введите размер массива:  ";
 			si = input();
 			ai = (int*)malloc(si * sizeof(int));
@@ -239,12 +259,15 @@ int main()
 			ml.push_back(ai, ch, si);
 			break;
 		case 3:
+			//удаление с начала списка
 			ml.pop_front();
 			break;
 		case 4:
+			//удаление с конца списка
 			ml.pop_back();
 			break;
 		case 5:
+			//вывод всего списка с головы до хвоста 
 			for (Node* ptr = ml.head; ptr != nullptr;ptr = ptr->next) {
 				cout << ptr->ch << " ";
 				for (int i = 0; i < ptr->si; i++) {
@@ -255,6 +278,7 @@ int main()
 			cout << endl;
 			break;
 		case 6:
+			//вставка по индексу
 			cout << "Если введенный индекс будет больше максимального, то элемент списка добавится в конец!" << endl;
 			cout << "Введите индекс:  ";
 			ind = input();
@@ -269,11 +293,13 @@ int main()
 			ml.insert(ind,ai, ch, si);
 			break;
 		case 7:
+			//удаление по индексу
 			cout << "Введите индекс:  ";
 			ind = input();
 			ml.erase(ind);
 			break;
 		case 8:
+			//вывод по индексу
 			cout << "Введите индекс:  ";
 			ind = input();
 			if (ml(ind) != nullptr) {
@@ -286,6 +312,7 @@ int main()
 			else cout << "Элемента с выбранным индексом не существует!" << endl;
 			break;
 		case 9:
+			//выход 
 			ex_fl = true;
 			break;
 		default:

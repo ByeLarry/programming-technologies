@@ -1,10 +1,10 @@
 ﻿  main.cpp
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(244,19): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(246,17): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(248,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(254,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(255,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(257,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(240): warning C4715: SoftwareChildProcedure: значение возвращается не при всех путях выполнения
-D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(210): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(257,19): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(259,17): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(262,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(270,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(271,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(273,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(249): warning C4715: SoftwareChildProcedure: значение возвращается не при всех путях выполнения
+D:\My GitHub\programming-technologies\lab3(winapi)\WNDmain.h(223): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
   lab3(winapi).vcxproj -> D:\My GitHub\programming-technologies\lab3(winapi)\x64\Debug\lab3(winapi).exe
