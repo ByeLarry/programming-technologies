@@ -1,6 +1,6 @@
 ﻿  pch.cpp
   Dij.cpp
-D:\My GitHub\programming-technologies\lab4\Dijkstra\Dij.cpp(6,77): warning C4190: для "Mydijkstra" задана С-связывание, но возвращаемый тип UDT "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" несовместим с языком Си
+D:\My GitHub\programming-technologies\lab4\Dijkstra\Dij.cpp(7,77): warning C4190: для "Mydijkstra" задана С-связывание, но возвращаемый тип UDT "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" несовместим с языком Си
 G:\Visual Studio\VC\Tools\MSVC\14.34.31933\include\xstring(5297,17): message : см. объявление "std::basic_string<char,std::char_traits<char>,std::allocator<char>>"
   dllmain.cpp
   Создание кода...
