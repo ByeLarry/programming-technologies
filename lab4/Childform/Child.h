@@ -1,13 +1,15 @@
 #pragma once
+//h файл будет подключен к проекту 
 #ifdef __cplusplus
-extern "C++" {
+extern "C" {
 #endif
 #include <Windows.h>
 #ifdef __cplusplus
 }
 #endif
 
-
+//ипорт функций из срр файла
+//эти функции будут вызывается в программе
 __declspec(dllimport) HWND WndEditFromChild(HWND hWnd);
 __declspec(dllimport) HWND WndStaticControlChild(HWND hWnd);
 __declspec(dllimport) HWND WndNumberAControlChild(HWND hWnd);

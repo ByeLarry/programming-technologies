@@ -1,10 +1,11 @@
 ﻿// interface.cpp : Определяет функции для статической библиотеки.
-//
+//в лабораторной работе 4 статические библиотеки не используются
 
 #include "pch.h"
 #include "framework.h"
 
-// TODO: Это пример библиотечной функции.
+
+//определение функций 
 void MainWndAddWidgets(HWND hWnd) {
 	CreateWindowA("button", "Посчитать", WS_VISIBLE | WS_CHILD | ES_CENTER, 200, 140, 100, 30, hWnd, (HMENU)1, NULL, NULL, NULL);
 	CreateWindowA("static", "А", WS_VISIBLE | WS_CHILD, 130, 60, 20, 20, hWnd, NULL, NULL, NULL, NULL);

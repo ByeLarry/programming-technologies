@@ -1,3 +1,4 @@
+//этот файла не обязателен
 LIBRARY
 EXPORTS
     WndEditFromChild

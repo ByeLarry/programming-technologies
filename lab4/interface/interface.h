@@ -1,6 +1,7 @@
 #pragma once
 #include<Windows.h>
 
+//определение функций для вызова из программы 
 void MainWndAddWidgets(HWND hWnd);
 HWND WndEdit(HWND hWnd);
 HWND WndStaticControl(HWND hWnd);

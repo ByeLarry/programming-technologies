@@ -1,13 +1,14 @@
 ﻿  pch.cpp
   Child.cpp
-D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(13,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(18,25): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(33,29): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(38,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
-D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(39,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(15,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(20,25): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(35,29): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
 D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(40,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
 D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(41,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(42,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab4\Childform\Child.cpp(43,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
   dllmain.cpp
   Создание кода...
+Child.def(1): warning LNK4017: оператор //этот не поддерживается на конечной платформе; пропущен
      Создается библиотека D:\My GitHub\programming-technologies\lab4\Childform\x64\Debug\Childform.lib и объект D:\My GitHub\programming-technologies\lab4\Childform\x64\Debug\Childform.exp
   Childform.vcxproj -> D:\My GitHub\programming-technologies\lab4\Childform\x64\Debug\Childform.dll

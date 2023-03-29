@@ -1,7 +1,8 @@
-// Dij.cpp
 #include "pch.h" 
 #include <string> 
 #define DLL_EXPORT __declspec(dllexport)
+
+//определение функции 
 extern "C" {
     DLL_EXPORT std::string Mydijkstra(int numA, int numB, int matrix[6][6]) {
 		std::string path;
