@@ -85,37 +85,14 @@ for1:
         jge endfor3
 
         ;if (matrix[u][v] > 0)-----------------------
-        ;нижепредставленная костыльная конструкция нужна для получения matrix[eax][r12d]
-        mov r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, eax
-        add r15d, r12d
-        add r15d, r12d
-        add r15d, r12d
-        add r15d, r12d
+        ;в r15d формируется адресс элемента матрицы matrix[eax][r12d]
+        ;умножаем 3 раза на 8 потому что компилятор masm разрешает умножать только на 1, 2, 4, 8
+        ;если бы можно было умножить сразу на 24, я так бы и сделал
+        lea r15d, [eax * 8]
+        lea r15d, [r15d + eax * 8]
+        lea r15d, [r15d + eax * 8]
+        lea r15d, [r15d + r12d * 4]
 
-        ; matrix[eax][r12d]
         mov r9d, [r8d + r15d]
         cmp r9d,0
         jle antithan2
@@ -140,7 +117,7 @@ endfor1:
 
 ;формируется возврат из функции
 ;возвращаемое значение должно быть в регистре RAX
-;в данном случае возращается кротчайший путь из S до E
+;в данном случае возращается кратчайший путь из S до E
 mov ebx, [e]
 mov eax, [dist + ebx*4]
 ret
