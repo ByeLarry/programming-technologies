@@ -1,0 +1,4 @@
+﻿  main.cpp
+G:\Visual Studio\VC\Tools\MSVC\14.34.31933\include\any(13): warning STL4038: The contents of <any> are available only with C++17 or later.
+D:\My GitHub\programming-technologies\lab6\car.h(56,22): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  lab6.vcxproj -> D:\My GitHub\programming-technologies\lab6\x64\Debug\lab6.exe
