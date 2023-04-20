@@ -1,7 +1,7 @@
 ﻿  main.cpp
-D:\My GitHub\programming-technologies\lab6\car.h(67,22): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\My GitHub\programming-technologies\lab6\car.h(91,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   Создание кода
   Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 162 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Создание кода завершено
-  lab6.vcxproj -> D:\My GitHub\programming-technologies\lab6\x64\Release\lab6.exe
+D:\My GitHub\programming-technologies\lab6\main.cpp(90): error C4703: используется потенциально неинициализированная локальная переменная-указатель "ptr"
+  All 160 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+LINK : fatal error LNK1257: не удалось создать код
