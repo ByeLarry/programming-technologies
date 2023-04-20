@@ -1,6 +1,0 @@
-﻿  Source.cpp
-D:\My GitHub\programming-technologies\Project1\Source.cpp(183,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\My GitHub\programming-technologies\Project1\Source.cpp(185,19): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\My GitHub\programming-technologies\Project1\Source.cpp(127): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
-D:\My GitHub\programming-technologies\Project1\Source.cpp(223): warning C4715: SoftwareChildProcedure: значение возвращается не при всех путях выполнения
-  Project1.vcxproj -> D:\My GitHub\programming-technologies\Project1\x64\Debug\Project1.exe
