@@ -1,9 +1,0 @@
-﻿  main.cpp
-D:\My GitHub\programming-technologies\lab2\main.cpp(214,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Создание кода
-  Previous IPDB not found, fall back to full compilation.
-D:\My GitHub\programming-technologies\lab2\main.cpp(162): warning C4715: LinkedList::operator(): значение возвращается не при всех путях выполнения
-D:\My GitHub\programming-technologies\lab2\main.cpp(179): warning C4715: LinkedList::insert: значение возвращается не при всех путях выполнения
-  All 134 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Создание кода завершено
-  lab2.vcxproj -> D:\My GitHub\programming-technologies\lab2\x64\Release\lab2.exe
