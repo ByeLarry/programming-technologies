@@ -1,9 +1,0 @@
-﻿  main.cpp
-D:\My GitHub\programming-technologies\lab5\WNDmain.h(33,9): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-  Создание кода
-D:\My GitHub\programming-technologies\lab5\WNDmain.h(212): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
-  2 of 183 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Создание кода завершено
-  lab3(winapi).vcxproj -> D:\My GitHub\programming-technologies\lab5\x64\Release\lab3(winapi).exe

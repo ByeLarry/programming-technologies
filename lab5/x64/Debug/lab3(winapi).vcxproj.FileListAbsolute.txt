@@ -1,4 +1,0 @@
-D:\My GitHub\programming-technologies\lab3(winapi)\x64\Debug\lab3(winapi).exe
-D:\My GitHub\programming-technologies\lab4\x64\Debug\lab3(winapi).exe
-D:\My GitHub\programming-technologies\lab5(from 4)\x64\Debug\lab3(winapi).exe
-D:\My GitHub\programming-technologies\lab5\x64\Debug\lab3(winapi).exe
