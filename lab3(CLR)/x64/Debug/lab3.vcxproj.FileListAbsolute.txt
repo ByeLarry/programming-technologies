@@ -4,3 +4,9 @@ D:\My GitHub\programming-technologies\lab3\x64\Debug\lab3.MainForm.resources
 D:\My GitHub\programming-technologies\lab3\x64\Debug\lab3.vcxproj.GenerateResource.cache
 D:\My GitHub\programming-technologies\lab3\x64\Debug\lab3.exe
 D:\My GitHub\programming-technologies\lab3\x64\Debug\lab3.SecondForm.resources
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.vcxproj.AssemblyReference.cache
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.vcxproj.SuggestedBindingRedirects.cache
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.MainForm.resources
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.SecondForm.resources
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.vcxproj.GenerateResource.cache
+D:\My GitHub\programming-technologies\lab3(CLR)\x64\Debug\lab3.exe
