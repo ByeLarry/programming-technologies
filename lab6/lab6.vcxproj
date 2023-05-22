@@ -130,10 +130,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="car.h" />
-    <ClInclude Include="engine.h" />
-    <ClInclude Include="owner.h" />
-    <ClInclude Include="sundry.h" />
+    <ClInclude Include="car.hpp" />
+    <ClInclude Include="engine.hpp" />
+    <ClInclude Include="owner.hpp" />
+    <ClInclude Include="pch.hpp" />
+    <ClInclude Include="sundry.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

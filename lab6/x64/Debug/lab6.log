@@ -1,3 +1,3 @@
 ﻿  main.cpp
-D:\My GitHub\programming-technologies\lab6\car.h(91,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\My GitHub\programming-technologies\lab6\car.hpp(96,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
   lab6.vcxproj -> D:\My GitHub\programming-technologies\lab6\x64\Debug\lab6.exe

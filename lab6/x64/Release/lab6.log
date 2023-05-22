@@ -1,7 +1,111 @@
 ﻿  main.cpp
-D:\My GitHub\programming-technologies\lab6\car.h(93,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-  Создание кода
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 164 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Создание кода завершено
-  lab6.vcxproj -> D:\My GitHub\programming-technologies\lab6\x64\Release\lab6.exe
+D:\My GitHub\programming-technologies\lab6\sundry.h(10,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\My GitHub\programming-technologies\lab6\sundry.h(10,14): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "error"
+D:\My GitHub\programming-technologies\lab6\sundry.h(10,20): error C2059: синтаксическая ошибка: =
+D:\My GitHub\programming-technologies\lab6\sundry.h(13,19): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "inp"
+D:\My GitHub\programming-technologies\lab6\sundry.h(13,24): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\My GitHub\programming-technologies\lab6\sundry.h(13,24): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\My GitHub\programming-technologies\lab6\sundry.h(25,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "inp"
+D:\My GitHub\programming-technologies\lab6\sundry.h(25,9): error C2065: inp: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(26,2): error C2065: cin: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(26,9): error C2065: inp: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(27,16): error C2065: inp: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(28,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(29,3): error C2065: cin: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(30,3): error C2065: cin: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(30,10): error C2065: inp: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(32,14): error C2065: inp: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(32,9): error C3861: stoi: идентификатор не найден
+D:\My GitHub\programming-technologies\lab6\sundry.h(36,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(36,91): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(37,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(37,20): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(38,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(38,22): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(39,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(39,23): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(43,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(43,8): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(43,63): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(44,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(44,57): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(45,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(45,48): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(46,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(46,50): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(47,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(47,76): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(48,2): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\sundry.h(48,50): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(11,9): error C3646: brand: неизвестный спецификатор переопределения
+D:\My GitHub\programming-technologies\lab6\car.h(11,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\My GitHub\programming-technologies\lab6\car.h(12,9): error C3646: model: неизвестный спецификатор переопределения
+D:\My GitHub\programming-technologies\lab6\car.h(12,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\My GitHub\programming-technologies\lab6\car.h(19,6): error C2061: синтаксическая ошибка: идентификатор "string"
+D:\My GitHub\programming-technologies\lab6\car.h(26,9): error C3646: get_brand: неизвестный спецификатор переопределения
+D:\My GitHub\programming-technologies\lab6\car.h(26,18): error C2059: синтаксическая ошибка: (
+D:\My GitHub\programming-technologies\lab6\car.h(26,21): error C2334: непредвиденные лексемы перед "{"; пропуск вероятного тела функции
+D:\My GitHub\programming-technologies\lab6\car.h(30,9): error C3646: get_model: неизвестный спецификатор переопределения
+D:\My GitHub\programming-technologies\lab6\car.h(30,18): error C2059: синтаксическая ошибка: (
+D:\My GitHub\programming-technologies\lab6\car.h(30,21): error C2334: непредвиденные лексемы перед "{"; пропуск вероятного тела функции
+D:\My GitHub\programming-technologies\lab6\car.h(38,17): error C2061: синтаксическая ошибка: идентификатор "string"
+D:\My GitHub\programming-technologies\lab6\car.h(42,17): error C2061: синтаксическая ошибка: идентификатор "string"
+D:\My GitHub\programming-technologies\lab6\car.h(20,9): error C2039: "brand": не является членом "Car".
+D:\My GitHub\programming-technologies\lab6\car.h(8,7): message : см. объявление "Car"
+D:\My GitHub\programming-technologies\lab6\car.h(20,17): error C2065: brand: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(21,9): error C2039: "model": не является членом "Car".
+D:\My GitHub\programming-technologies\lab6\car.h(8,7): message : см. объявление "Car"
+D:\My GitHub\programming-technologies\lab6\car.h(21,17): error C2065: model: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(39,9): error C2039: "brand": не является членом "Car".
+D:\My GitHub\programming-technologies\lab6\car.h(8,7): message : см. объявление "Car"
+D:\My GitHub\programming-technologies\lab6\car.h(39,17): error C2065: new_brand: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(43,9): error C2039: "model": не является членом "Car".
+D:\My GitHub\programming-technologies\lab6\car.h(8,7): message : см. объявление "Car"
+D:\My GitHub\programming-technologies\lab6\car.h(43,17): error C2065: new_model: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(52,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(52,52): error C2065: brand: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(52,61): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(53,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(53,38): error C2065: model: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(53,47): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(54,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(54,56): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(54,64): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(59,10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "newValue"
+D:\My GitHub\programming-technologies\lab6\car.h(59,10): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(61,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(61,61): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(62,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(62,47): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(63,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(63,41): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(66,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(67,3): error C2065: cin: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(67,9): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(72,14): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(75,14): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(78,14): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(79,19): error C2065: newValue: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(79,14): error C3861: stoi: идентификатор не найден
+D:\My GitHub\programming-technologies\lab6\car.h(82,5): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(82,11): error C2065: error: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(82,20): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(82,28): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(86,4): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(86,10): error C2065: error: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(86,19): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(86,27): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(93,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(94,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\My GitHub\programming-technologies\lab6\car.h(97,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(97,67): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(97,75): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(102,3): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(105,4): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(105,75): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(105,83): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(108,4): error C2065: cout: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(108,10): error C2065: error: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\car.h(108,19): error C2065: endl: необъявленный идентификатор
+D:\My GitHub\programming-technologies\lab6\owner.h(15,9): error C3646: owner: неизвестный спецификатор переопределения
+D:\My GitHub\programming-technologies\lab6\owner.h(15,14): fatal  error C1003: число ошибок превышает 100; остановка компиляции

@@ -1,1 +1,5 @@
-﻿  lab3(winapi).vcxproj -> D:\My GitHub\programming-technologies\lab4\x64\Debug\lab3(winapi).exe
+﻿  main.cpp
+D:\My GitHub\programming-technologies\lab4\WNDmain.h(25,9): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\My GitHub\programming-technologies\lab4\WNDmain.h(230): warning C4715: SoftwareChildProcedure: значение возвращается не при всех путях выполнения
+D:\My GitHub\programming-technologies\lab4\WNDmain.h(200): warning C4715: SoftwareMainProcedure: значение возвращается не при всех путях выполнения
+  lab3(winapi).vcxproj -> D:\My GitHub\programming-technologies\lab4\x64\Debug\lab3(winapi).exe

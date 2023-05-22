@@ -1,0 +1,9 @@
+﻿  main.cpp
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(250,19): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(252,17): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(255,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(263,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(264,2): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+D:\My GitHub\programming-technologies\lab3\WNDmain.h(266,23): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "CreateWindowA"
+MSVCRT.lib(exe_main.obj) : error LNK2001: неразрешенный внешний символ main.
+D:\My GitHub\programming-technologies\lab3\x64\Release\lab3(winapi).exe : fatal error LNK1120: неразрешенных внешних элементов: 1
